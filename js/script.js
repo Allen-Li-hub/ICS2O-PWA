@@ -1,33 +1,28 @@
-// Copyright (c) 2022 Allen Li All rights reserved
-//
-// Created by: Allen Li
-// Created on: Oct 2022
-// This file contains the JS functions for index.html
-
-"use strict"
-
-/**
- * Check servie worker.
- */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-Unit3-02-HTML-lighthouse/sw.js", {
-    scope: "/ICS2O-Unit3-02-HTML-lighthouse/",
+  navigator.serviceWorker.register("/Unit-5-01-JS/sw.js", {
+    scope: "/Unit-5-01-JS/",
   })
 }
 
-/**
- * This function displays an alert.
- */
-function calculateVolumeClicked() {
-  // input
-  const length = parseFloat(document.getElementById("length").value)
-  const width = parseFloat(document.getElementById("width").value)
-  const height = parseFloat(document.getElementById("height").value)
+"use strict"
 
-  // process
-  const volume = (length * width * height) / 3
+const randomNumber = Math.floor(Math.random() * 6) + 1;
 
-  // output
-  document.getElementById("volume").innerHTML =
-    "Volume is: " + volume.toFixed(2) + " mm³."
+function myButtonClicked() {
+  document.getElementById("answer").innerHTML =
+    "<p>Value is: " + slider.value + "</p>"
+}
+
+function updateSliderValue(valueFromSlider) {
+  document.getElementById("slider-value").innerHTML = valueFromSlider
+
+  if (valueFromSlider == randomNumber) {
+    document.getElementById("answer").innerHTML =
+      "the answer was, " + randomNumber + "!" + " You got it! Good job."
+  }
+
+    if (valueFromSlider != randomNumber) {
+    document.getElementById("answer").innerHTML =
+      "the answer was, " + randomNumber + "!" + " Nice Guess! but try again."
+  }
 }
