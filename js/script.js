@@ -18,11 +18,11 @@ function updateSliderValue(valueFromSlider) {
 
   if (valueFromSlider == randomNumber) {
     document.getElementById("answer").innerHTML =
-      "the answer was, " + randomNumber + "!" + " You got it! Good job."
+      "the answer was, " + randomNumber + "!" + " You got it! Excellent."
   }
 
   if (valueFromSlider != randomNumber) {
     document.getElementById("answer").innerHTML =
-      "the answer was, " + randomNumber + "!" + " Nice Guess! but try again."
+      "Sorry the answer was, " + randomNumber + "!" + " please try again."
   }
 }
