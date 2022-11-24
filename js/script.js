@@ -1,10 +1,19 @@
+// Copyright (c) 2022 Allen Li All rights reserved
+//
+// Created by: Allen Li
+// Created on: Oct 2022
+// This file contains the JS functions for index.html
+
+"use strict"
+
+/**
+ * Check servie worker.
+ */
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register("/ICS2O-Unit5-01-HTML/sw.js", {
     scope: "/ICS2O-Unit5-01-HTML/",
   })
 }
-
-;("use strict")
 
 const randomNumber = Math.floor(Math.random() * 6) + 1
 
