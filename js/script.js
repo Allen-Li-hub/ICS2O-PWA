@@ -1,7 +1,7 @@
 // Copyright (c) 2022 Allen Li All rights reserved
 //
 // Created by: Allen Li
-// Created on: Oct 2022
+// Created on: Dec 2022
 // This file contains the JS functions for index.html
 
 "use strict"
